@@ -30,6 +30,8 @@ html {
 
 body {
   background-color: var(--color-bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cpath d='M80 64 L84 78 L80 96 L76 78 Z M64 80 L78 76 L96 80 L78 84 Z M0 -16 L4 -2 L0 16 L-4 -2 Z M-16 0 L-2 -4 L16 0 L-2 4 Z M160 -16 L164 -2 L160 16 L156 -2 Z M144 0 L158 -4 L176 0 L158 4 Z M0 144 L4 158 L0 176 L-4 158 Z M-16 160 L-2 156 L16 160 L-2 164 Z M160 144 L164 158 L160 176 L156 158 Z M144 160 L158 156 L176 160 L158 164 Z' stroke='%23C9922A' stroke-width='1.5' stroke-opacity='0.08' fill='%23C9922A' fill-opacity='0.02'/%3E%3C/svg%3E");
+  background-repeat: repeat;
   color: var(--color-text);
   font-family: var(--font-body, system-ui, sans-serif);
   -webkit-font-smoothing: antialiased;
@@ -124,4 +126,19 @@ body::-webkit-scrollbar-thumb:hover {
   flex: 1 1 auto;
   min-height: 0;
   height: auto;
+}
+
+.bg-site-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cpath d='M80 64 L84 78 L80 96 L76 78 Z M64 80 L78 76 L96 80 L78 84 Z M0 -16 L4 -2 L0 16 L-4 -2 Z M-16 0 L-2 -4 L16 0 L-2 4 Z M160 -16 L164 -2 L160 16 L156 -2 Z M144 0 L158 -4 L176 0 L158 4 Z M0 144 L4 158 L0 176 L-4 158 Z M-16 160 L-2 156 L16 160 L-2 164 Z M160 144 L164 158 L160 176 L156 158 Z M144 160 L158 156 L176 160 L158 164 Z' stroke='%23C9922A' stroke-width='1.5' stroke-opacity='0.08' fill='%23C9922A' fill-opacity='0.02'/%3E%3C/svg%3E") !important;
+  background-repeat: repeat !important;
+}
+
+.bg-site-dark-band {
+  background-color: var(--color-dark-band);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cpath d='M80 64 L84 78 L80 96 L76 78 Z M64 80 L78 76 L96 80 L78 84 Z M0 -16 L4 -2 L0 16 L-4 -2 Z M-16 0 L-2 -4 L16 0 L-2 4 Z M160 -16 L164 -2 L160 16 L156 -2 Z M144 0 L158 -4 L176 0 L158 4 Z M0 144 L4 158 L0 176 L-4 158 Z M-16 160 L-2 156 L16 160 L-2 164 Z M160 144 L164 158 L160 176 L156 158 Z M144 160 L158 156 L176 160 L158 164 Z' stroke='%23E8B84B' stroke-width='1.5' stroke-opacity='0.15' fill='%23E8B84B' fill-opacity='0.04'/%3E%3C/svg%3E") !important;
+  background-repeat: repeat !important;
+}
+
+footer.bg-site-dark-band {
+  background-image: none !important;
 }

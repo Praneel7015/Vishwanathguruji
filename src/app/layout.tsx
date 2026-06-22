@@ -7,6 +7,7 @@ import {
 } from 'next/font/google';
 // import { GoogleAnalytics } from '@next/third-parties/google';
 import Navbar from '@/components/layout/Navbar';
+import GurujiBanner from '@/components/layout/GurujiBanner';
 import Footer from '@/components/layout/Footer';
 import FloatingButtons from '@/components/layout/FloatingButtons';
 import BackToTop from '@/components/ui/BackToTop';
@@ -145,6 +146,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <Navbar />
+        <GurujiBanner />
         <main>{children}</main>
         <Footer />
         <FloatingButtons />

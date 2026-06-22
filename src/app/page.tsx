@@ -5,6 +5,7 @@ import ServicesGrid from '@/components/sections/home/ServicesGrid';
 import ScrollTicker from '@/components/ui/ScrollTicker';
 import WhyChooseUs from '@/components/sections/home/WhyChooseUs';
 import TestimonialsCarousel from '@/components/sections/home/TestimonialsCarousel';
+import MessageFromGuruji from '@/components/sections/home/MessageFromGuruji';
 import GurujiGalleryCarousel from '@/components/sections/about/GurujiGalleryCarousel';
 import PujasBand from '@/components/sections/home/PujasBand';
 import ContactBand from '@/components/sections/home/ContactBand';
@@ -78,6 +79,7 @@ export default function HomePage() {
       <ScrollTicker />
       <WhyChooseUs />
       <TestimonialsCarousel />
+      <MessageFromGuruji />
       <GurujiGalleryCarousel />
       <PujasBand />
       <ContactBand />
