@@ -7,6 +7,8 @@ const BANNERS = [
   '/images/gurujibanner1.jpeg',
   '/images/gurujibanner2.jpeg',
   '/images/gurujibanner3.jpeg',
+  '/images/gurujibanner4.jpeg',
+  '/images/gurujibanner5.jpeg',
 ];
 
 export default function GurujiBanner() {

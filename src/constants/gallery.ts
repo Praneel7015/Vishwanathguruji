@@ -27,6 +27,8 @@ export const GALLERY: GalleryImage[] = [
   make('g14', IMG.gallery(10), 'ceremonies', 'Maha Rudra Abhishek ritual', 800, 1000),
   make('g15', IMG.puja.maha, 'pujas', 'Havan kunda being prepared', 800, 600),
   make('g16', IMG.gurujiSelfie, 'events', 'Guruji blessing devotees', 800, 1100),
+  make('g17', IMG.gallery(16), 'media', 'Guruji portrait — Best Astrologer in Bangalore', 800, 800),
+  make('g18', IMG.gallery(17), 'media', 'Guruji with zodiac wheel and astrology instruments', 800, 800),
 ];
 
 export const GALLERY_CATEGORIES: { key: GalleryImage['category'] | 'all'; label: string }[] = [
