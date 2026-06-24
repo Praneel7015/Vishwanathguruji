@@ -9,7 +9,7 @@ export const GOOGLE_MAPS_URL =
 
 export const GOOGLE_RATING = {
   value: 4.9,
-  count: 100, // approximate — update periodically
+  count: 1000, // approximate — update periodically
 };
 
 /* ------------------------------------------------------------------ */

@@ -4,11 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 const BANNERS = [
-  '/images/gurujibanner1.jpeg',
-  '/images/gurujibanner2.jpeg',
-  '/images/gurujibanner3.jpeg',
-  '/images/gurujibanner4.jpeg',
-  '/images/gurujibanner5.jpeg',
+  '/images/gurujibanner-new.jpeg',
 ];
 
 export default function GurujiBanner() {
