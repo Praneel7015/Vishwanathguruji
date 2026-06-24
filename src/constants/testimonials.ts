@@ -1,7 +1,20 @@
 import type { Testimonial, VideoTestimonial } from '@/types';
-import { PLACEHOLDER_IMG } from './siteConfig';
 import { IMG } from './images';
 
+/* ------------------------------------------------------------------ */
+/* Google Maps listing details                                        */
+/* ------------------------------------------------------------------ */
+export const GOOGLE_MAPS_URL =
+  'https://maps.app.goo.gl/cy65pP2XhWkLYhpE8';
+
+export const GOOGLE_RATING = {
+  value: 4.9,
+  count: 100, // approximate — update periodically
+};
+
+/* ------------------------------------------------------------------ */
+/* Video testimonials (real client videos — unchanged)                 */
+/* ------------------------------------------------------------------ */
 export const VIDEO_TESTIMONIALS: VideoTestimonial[] = [
   {
     id: 'vt1',
@@ -41,104 +54,158 @@ export const VIDEO_TESTIMONIALS: VideoTestimonial[] = [
   },
 ];
 
+/* ------------------------------------------------------------------ */
+/* Written reviews — real reviews from Google Maps                     */
+/* ------------------------------------------------------------------ */
 export const TESTIMONIALS: Testimonial[] = [
   {
-    id: 't1',
-    name: 'Rahul Sharma',
-    city: 'Bangalore',
-    serviceSlug: 'husband-wife-problem',
+    id: 'g1',
+    name: 'Himanshu Sharma',
     rating: 5,
     quote:
-      "Guruji's remedies brought peace to our home after five years of constant quarrels. My wife and I rediscovered each other within a month. Forever grateful.",
-    avatar: PLACEHOLDER_IMG,
-    date: '2025-08-12',
+      'Vishwanath expertise in Vastu and astrology helped us understand the root cause. His suggested remedies, including specific poojas and changes to the property, brought about a positive change. The resolution was peaceful and fair. Worth the money',
+    date: '2026-03-24',
+    relativeDate: '3 months ago',
+    source: 'google',
   },
   {
-    id: 't2',
-    name: 'Priya Iyengar',
-    city: 'Mysore',
-    serviceSlug: 'love-marriage-problem',
+    id: 'g2',
+    name: 'Mahammad Nadaf',
     rating: 5,
     quote:
-      "My parents had refused our inter-caste marriage for three years. After Guruji's pujas, their hearts softened and we married with their full blessings.",
-    avatar: PLACEHOLDER_IMG,
-    date: '2025-09-03',
+      'Very accurate and honest astrologer. Many others just say what you want to hear for money, but Vishwanath Guruji tells the truth even if it\'s bitter and then provides real solutions. My child\'s education problems got solved after his consultation. We\'re so grateful. Will always come back to him for any issue.',
+    date: '2026-03-24',
+    relativeDate: '3 months ago',
+    source: 'google',
   },
   {
-    id: 't3',
-    name: 'Anand Reddy',
-    city: 'Hyderabad',
-    serviceSlug: 'career-problems',
+    id: 'g3',
+    name: 'Manish Manish',
     rating: 5,
     quote:
-      "I had been passed over for promotion four times. Guruji prescribed a Saturn remedy and a yellow sapphire. Within four months I was promoted twice.",
-    avatar: PLACEHOLDER_IMG,
-    date: '2025-07-21',
+      'Vishwanath guruji is a best palm reader he saw my hand and given me the solution I really thank vishwanath guruji for his calmness and peacefully place. His predictions are accurate. I guys can trust this place',
+    date: '2026-03-24',
+    relativeDate: '3 months ago',
+    source: 'google',
   },
   {
-    id: 't4',
-    name: 'Suresh Kumar',
-    city: 'Chennai',
-    serviceSlug: 'black-magic-remedies',
+    id: 'g4',
+    name: 'Wajid mujawar',
     rating: 5,
     quote:
-      "Constant nightmares, sudden illness in the family, business losses, all began after a jealous neighbour. Guruji removed the negativity in 21 days. We are whole again.",
-    avatar: PLACEHOLDER_IMG,
-    date: '2025-06-15',
+      'My confidence level was very low due to repeated failures. Guruji motivated me and gave simple solutions that helped me regain belief in myself.',
+    date: '2026-03-24',
+    relativeDate: '3 months ago',
+    source: 'google',
   },
   {
-    id: 't5',
-    name: 'Lakshmi Devi',
-    city: 'Bangalore',
-    serviceSlug: 'vashikaran-specialist',
+    id: 'g5',
+    name: 'Ai Ahma',
     rating: 5,
     quote:
-      "My son had drifted into bad company and refused to listen. After Guruji's Vashikaran puja, he came home, asked for forgiveness, and is now studying again.",
-    avatar: PLACEHOLDER_IMG,
-    date: '2025-10-01',
+      'The guidance helped me gain clarity, peace of mind, and a positive outlook. His approach is genuine, calm, and spiritual. Vishwanath Guruji focuses on practical advice along with faith-based solutions. Highly recommended for anyone facing love, relationship, or family-related issues and seeking honest astrological guidance.',
+    date: '2025-12-24',
+    relativeDate: '6 months ago',
+    source: 'google',
   },
   {
-    id: 't6',
-    name: 'Vikram Singh',
-    city: 'Delhi',
-    serviceSlug: 'financial-problem',
+    id: 'g6',
+    name: 'Sarfraz Satti',
     rating: 5,
     quote:
-      "I consulted Guruji on the phone from Delhi. He prescribed a Lakshmi-Kubera puja. Within two months a property I had given up on sold at a 30% premium.",
-    avatar: PLACEHOLDER_IMG,
-    date: '2025-05-09',
+      'I felt cursed every good thing in life turned bad, friends left, opportunities vanished. I was lonely, hopeless, questioning God. Guruji hugged me like a father when I broke down in his chamber, said "The curse is lifting today." He did a full dosha nivaran. Since then, life flipped good people came, success followed, I feel blessed every single day. From darkness to light because of this one man. Vishwanath Guruji, you are my guru, my savior. I owe you my happiness.',
+    date: '2026-03-24',
+    relativeDate: '3 months ago',
+    source: 'google',
   },
   {
-    id: 't7',
-    name: 'Meena Acharya',
-    city: 'Bangalore',
-    serviceSlug: 'vastu-shastra',
+    id: 'g7',
+    name: 'Sanjoy Baidya',
     rating: 5,
     quote:
-      "Guruji visited our new home before the housewarming. The Vastu corrections he suggested were small but powerful, our family\'s health and finances have flourished since.",
-    avatar: PLACEHOLDER_IMG,
-    date: '2025-11-18',
+      'Vishwanath Guruji\'s predictions about my family matters were very accurate. What impressed me most was his humble nature and the clarity with which he explained everything. Truly grateful for his support. He is very experienced and genuine astrologer around here must try frds',
+    date: '2026-03-24',
+    relativeDate: '3 months ago',
+    source: 'google',
   },
   {
-    id: 't8',
-    name: 'Karthik Nair',
-    city: 'Kochi',
-    serviceSlug: 'family-problem',
+    id: 'g8',
+    name: 'Niki Kashid',
     rating: 5,
     quote:
-      "Our family was torn over a property dispute for years. Guruji performed Pitru Tarpan and within a few weeks my brothers and I sat together for the first time in a decade.",
-    avatar: PLACEHOLDER_IMG,
-    date: '2025-04-22',
+      'After 12 years of childless marriage, taunts from relatives broke me into pieces. I felt like a burden, unworthy. My husband stood by me but I saw his hidden sadness. Guruji cried with me during the first meeting actual tears and said \u201CYour child is waiting in the stars, just a little more patience.\u201D Special santan pujas, fasting guidance. Last year we welcomed twins. Holding them I still sob thinking how close I came to giving up. Guruji turned my empty arms into the fullest heart.',
+    date: '2026-03-24',
+    relativeDate: '3 months ago',
+    source: 'google',
   },
   {
-    id: 't9',
-    name: 'Geetha Rao',
-    city: 'Bangalore',
-    serviceSlug: 'health-problem',
+    id: 'g9',
+    name: 'Pintookumar Rawat',
     rating: 5,
     quote:
-      "Doctors could not diagnose my chronic fatigue for two years. Guruji identified a Saturn affliction, prescribed Maha Mrityunjaya Jaap, and my energy has returned.",
-    avatar: PLACEHOLDER_IMG,
-    date: '2025-12-01',
+      'When my family was going through constant misunderstandings, I approached Vishwanath Guruji. He listened with so much patience and gave remedies that actually brought peace back into our home. I\'m deeply thankful.',
+    date: '2025-10-24',
+    relativeDate: '8 months ago',
+    source: 'google',
+  },
+  {
+    id: 'g10',
+    name: 'Imteyaj Alam',
+    rating: 5,
+    quote:
+      'Thanks guruji. My son was not concentrating on studies at all. Guruji guided us with proper remedies and gave him a yantra to keep. Now I am happy that it worked actualy',
+    date: '2026-03-24',
+    relativeDate: '3 months ago',
+    source: 'google',
+  },
+  {
+    id: 'g11',
+    name: 'Karam Kumar',
+    rating: 5,
+    quote:
+      'My wife was always fighting with me and we are never been happy in life and we couldn\'t take it anymore and was about be apart but after one of my frds suggested me to visit vishwanth guruji. He explained that there is a dhosha so gave a simple rituals and now we are leading our life happily',
+    date: '2026-03-24',
+    relativeDate: '3 months ago',
+    source: 'google',
+  },
+  {
+    id: 'g12',
+    name: 'bibiayesha Mulla',
+    rating: 5,
+    quote:
+      'Child not conceiving after 4 years of marriage. We were heartbroken. Vishwanath Guruji identified santan dosha, suggested specific rituals and fasting. Now we have a healthy baby boy! Miracles do happen with faith and his help. Emotional thank you.',
+    date: '2026-03-24',
+    relativeDate: '3 months ago',
+    source: 'google',
+  },
+  {
+    id: 'g13',
+    name: 'Naushad Alam',
+    rating: 5,
+    quote:
+      'My issues was very much hight. Vehicle accidents minor but frequent scratches, breakdowns, near misses. Guruji identified Mars dosha, performed vehicle puja and gave red thread remedy. Driving safe for over a year now, no incidents. Protective power real. He is very genuine',
+    date: '2026-03-24',
+    relativeDate: '3 months ago',
+    source: 'google',
+  },
+  {
+    id: 'g14',
+    name: 'SmrutiGANESH Gudu',
+    rating: 5,
+    quote:
+      'My son was not concentrating on studies at all. Guruji guided us with proper remedies and gave him a yantra to keep.',
+    date: '2026-01-24',
+    relativeDate: '5 months ago',
+    source: 'google',
+  },
+  {
+    id: 'g15',
+    name: 'mallesh Mla',
+    rating: 5,
+    quote:
+      'Guruji explained his planetary chart and recommended chanting and wearing a specific gemstone. His concentration has improved a lot since then.',
+    date: '2025-12-24',
+    relativeDate: '6 months ago',
+    source: 'google',
   },
 ];

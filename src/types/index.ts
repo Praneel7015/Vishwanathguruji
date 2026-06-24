@@ -14,12 +14,14 @@ export interface Service {
 export interface Testimonial {
   id: string;
   name: string;
-  city: string;
-  serviceSlug: string;
   rating: number;
   quote: string;
-  avatar: string;
+  /** ISO date string used for SEO schema */
   date: string;
+  /** Human-friendly label shown on card, e.g. "3 months ago" */
+  relativeDate: string;
+  /** Where the review was sourced from */
+  source: 'google';
 }
 
 export interface VideoTestimonial {

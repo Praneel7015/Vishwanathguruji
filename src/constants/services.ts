@@ -23,7 +23,7 @@ export const SERVICES: Service[] = [
       { question: 'How long does the remedy take?', answer: 'Mild cases resolve in 11 to 21 days. Severe long-standing cases may require a 40-day mandala of pujas and follow-up consultations.' },
       { question: 'Is the process safe?', answer: 'Every ritual performed by Guruji is purely Vedic, protective, and ethical. There are no harmful procedures, only purification and restoration of your natural aura.' },
     ],
-    relatedTestimonialIds: ['t1', 't4'],
+    relatedTestimonialIds: [],
     process: baseProcess,
     whySeek: [
       { icon: 'AlertTriangle', label: 'Unexplained Illness' },
@@ -46,7 +46,7 @@ export const SERVICES: Service[] = [
       { question: 'Do I need to be present in Bangalore?', answer: 'In-person consultation is preferred, but remote consultations and remedies are available via phone and WhatsApp.' },
       { question: 'What information does Guruji need?', answer: 'Your full name, date of birth, time and place of birth, plus the same details of the concerned person if available.' },
     ],
-    relatedTestimonialIds: ['t2', 't5'],
+    relatedTestimonialIds: [],
     process: baseProcess,
     whySeek: [
       { icon: 'HeartHandshake', label: 'Lost Love Reunion' },
@@ -69,7 +69,7 @@ export const SERVICES: Service[] = [
       { question: 'How much does a site visit cost?', answer: 'Site visit fees depend on the size of the property and the city. Please call to schedule.' },
       { question: 'Will Guruji visit my office?', answer: 'Yes, Guruji conducts both residential and commercial Vastu visits within Bangalore and beyond.' },
     ],
-    relatedTestimonialIds: ['t3'],
+    relatedTestimonialIds: [],
     process: baseProcess,
     whySeek: [
       { icon: 'Compass', label: 'Direction Doshas' },
@@ -92,7 +92,7 @@ export const SERVICES: Service[] = [
       { question: 'Is this for inter-caste marriages too?', answer: 'Yes, Guruji has helped thousands of couples across all religions and communities.' },
       { question: 'When should we start?', answer: 'The earlier, the better, ideally as soon as you sense parental hesitation or astrological concerns.' },
     ],
-    relatedTestimonialIds: ['t2'],
+    relatedTestimonialIds: [],
     process: baseProcess,
     whySeek: [
       { icon: 'Heart', label: 'Parental Opposition' },
@@ -138,7 +138,7 @@ export const SERVICES: Service[] = [
       { question: 'Is divorce always avoidable?', answer: 'In 9 out of 10 cases, yes. Even hardened separations have been reversed through Guruji\'s remedies.' },
       { question: 'How private is the consultation?', answer: 'Completely. Every consultation is held in strictest confidence.' },
     ],
-    relatedTestimonialIds: ['t1'],
+    relatedTestimonialIds: [],
     process: baseProcess,
     whySeek: [
       { icon: 'HeartCrack', label: 'Constant Quarrels' },
@@ -207,7 +207,7 @@ export const SERVICES: Service[] = [
       { question: 'Do gemstones really work?', answer: 'Only when prescribed correctly. A wrong gemstone harms more than helps, always consult Guruji first.' },
       { question: 'How long until career growth?', answer: 'Most clients see promotional or financial movement within 3–6 months of remedies.' },
     ],
-    relatedTestimonialIds: ['t3'],
+    relatedTestimonialIds: [],
     process: baseProcess,
     whySeek: [
       { icon: 'TrendingDown', label: 'Career Stagnation' },

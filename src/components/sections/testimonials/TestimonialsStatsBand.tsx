@@ -1,7 +1,9 @@
+import { GOOGLE_RATING } from '@/constants/testimonials';
+
 export default function TestimonialsStatsBand() {
   const items = [
     { value: '55,000+', label: 'Clients Counselled' },
-    { value: '4.9 / 5', label: 'Average Rating' },
+    { value: `${GOOGLE_RATING.value} / 5`, label: 'Google Rating' },
     { value: '35+ yrs', label: 'Years of Service' },
   ];
   return (
