@@ -26,6 +26,11 @@ const VIDEOS = [
     src: '/videos/guruji03.mp4',
     title: 'Messages from the Centre',
   },
+  {
+    id: 'v4',
+    src: '/videos/guruji04.mp4',
+    title: 'Spiritual Guidance & Remedies',
+  },
 ];
 
 function VideoCard({ video }: { video: (typeof VIDEOS)[number] }) {
@@ -133,6 +138,7 @@ export default function MessageFromGuruji() {
             480: { slidesPerView: 1.5, spaceBetween: 16 },
             768: { slidesPerView: 2.2, spaceBetween: 20 },
             1024: { slidesPerView: 3, spaceBetween: 24 },
+            1280: { slidesPerView: 4, spaceBetween: 24 },
           }}
           navigation={{ prevEl: '.vid-prev', nextEl: '.vid-next' }}
         >
@@ -144,20 +150,20 @@ export default function MessageFromGuruji() {
         </Swiper>
 
         {/* Navigation arrows */}
-        <div className="flex justify-center gap-3 mt-8">
+        <div className="flex justify-center gap-4 mt-10">
           <button
             type="button"
-            className="vid-prev w-10 h-10 rounded-full border border-accent text-accent flex items-center justify-center hover:bg-accent hover:text-site-white transition-colors"
+            className="vid-prev w-12 h-12 rounded-full border-2 border-accent/70 bg-accent/10 text-accent-light flex items-center justify-center hover:bg-accent hover:text-site-dark-band hover:border-accent transition-all duration-300 shadow-md active:scale-95 disabled:opacity-40 disabled:pointer-events-none"
             aria-label="Previous video"
           >
-            <ChevronLeft size={18} />
+            <ChevronLeft size={22} className="stroke-[2.5]" />
           </button>
           <button
             type="button"
-            className="vid-next w-10 h-10 rounded-full border border-accent text-accent flex items-center justify-center hover:bg-accent hover:text-site-white transition-colors"
+            className="vid-next w-12 h-12 rounded-full border-2 border-accent/70 bg-accent/10 text-accent-light flex items-center justify-center hover:bg-accent hover:text-site-dark-band hover:border-accent transition-all duration-300 shadow-md active:scale-95 disabled:opacity-40 disabled:pointer-events-none"
             aria-label="Next video"
           >
-            <ChevronRight size={18} />
+            <ChevronRight size={22} className="stroke-[2.5]" />
           </button>
         </div>
       </div>
