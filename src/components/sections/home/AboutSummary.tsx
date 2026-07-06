@@ -27,7 +27,7 @@ export default function AboutSummary() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
             <Image
               src={IMG.homeBanner}
-              alt="Pandit Sri Vishwanath Guruji"
+              alt="Best Astrologer in Bangalore — Pandit Sri Vishwanath Guruji"
               fill
               priority
               className="object-cover"
@@ -43,17 +43,24 @@ export default function AboutSummary() {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <div className="text-xs uppercase tracking-[0.2em] font-semibold text-accent mb-2">
-            Welcome to
+            Welcome to Sri Panchamukhi Astro Centre
           </div>
           <h2 className="font-display text-3xl md:text-4xl text-primary font-bold leading-tight">
-            Sri Panchamukhi Astro Centre
+            Famous Astrologer in Bangalore
           </h2>
           <div className="w-10 h-[3px] bg-accent mt-4 mb-6" />
           <div className="space-y-4 text-site-text-muted leading-relaxed">
             <p>
-              For more than three decades, Pandit Sri Vishwanath Guruji has been a beacon of
-              Vedic wisdom in Jayanagar, Bangalore, guiding seekers from across India and the
-              diaspora through life&apos;s most stubborn challenges.
+              For more than three decades, Pandit Sri Vishwanath Guruji has been widely regarded
+              as the{' '}
+              <Link
+                href="/best-astrologer-in/bangalore"
+                className="text-accent font-semibold hover:text-primary transition-colors"
+              >
+                best astrologer in Bangalore
+              </Link>
+              , guiding seekers from across India and the diaspora through life&apos;s most
+              stubborn challenges from his centre in Jayanagar.
             </p>
             <p>
               From career stagnation and marital discord to the heavier shadows of black magic and

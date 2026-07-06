@@ -29,9 +29,9 @@ export const SITE_CONFIG = {
   mapDirections:
     'https://www.google.com/maps/place/Astrologer+Vishwanath+Guruji+Jayanagar/@12.9150453,77.5937994,67m/data=!3m1!1e3!4m6!3m5!1s0x3bae152d910ad543:0xa6e6957b5e5622df!8m2!3d12.9152455!4d77.5937114!16s%2Fg%2F11swzq19sw?entry=ttu',
   socials: {
-    instagram: 'https://instagram.com/',
-    facebook: 'https://facebook.com/',
-    youtube: 'https://youtube.com/',
+    instagram: 'https://www.instagram.com/astrologervishwanathgurujijaya',
+    facebook: 'https://www.facebook.com/astrologervishwanathguruji',
+    youtube: 'https://www.youtube.com/@AstrologerVishwanathGuruji',
     twitter: 'https://twitter.com/',
   },
   twitterHandle: '@vishwanathguruji',
@@ -56,6 +56,13 @@ export const SITE_CONFIG = {
   },
   // High-intent keywords that recur across pages.
   primaryKeywords: [
+    'Astrologer',
+    'Horoscope',
+    'vashikaran specialist',
+    'zodiac signs dates',
+    'kundali',
+    'online astrology consultation',
+    'free astrology predictions',
     'best astrologer in Bangalore',
     'top astrologer in Bangalore',
     'famous astrologer in Bangalore',

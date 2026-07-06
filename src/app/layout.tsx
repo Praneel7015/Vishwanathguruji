@@ -5,7 +5,7 @@ import {
   Noto_Serif_Devanagari,
   Noto_Serif_Kannada,
 } from 'next/font/google';
-// import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import Navbar from '@/components/layout/Navbar';
 import GurujiBanner from '@/components/layout/GurujiBanner';
 import Footer from '@/components/layout/Footer';
@@ -44,9 +44,9 @@ const kannada = Noto_Serif_Kannada({
   weight: ['400', '600'],
 });
 
-const SITE_DEFAULT_TITLE = `${SITE_CONFIG.guruji} | Best Astrologer in Bangalore | ${SITE_CONFIG.name}`;
+const SITE_DEFAULT_TITLE = 'Best Astrologer in Bangalore | Top Vastu-Horoscope Specialist';
 const SITE_DEFAULT_DESCRIPTION =
-  'Pandit Sri Vishwanath Guruji is the best Vedic astrologer in Bangalore with 35+ years of experience. Expert Vashikaran, Black Magic Removal, Vastu Shastra, marriage, love, career, family, health, and financial problem solutions at Sri Panchamukhi Astro Centre, Jayanagar — serving Bangalore, Karnataka, and clients across India.';
+  'Best Astrologer in Bangalore with 35+ years of experience offering expert Vastu and Horoscope Consultant services for career, marriage, health, wealth & success.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.siteUrl),
@@ -151,7 +151,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <FloatingButtons />
         <BackToTop />
-        {/* <GoogleAnalytics gaId="G-XXXXXXX" /> */}
+        <GoogleAnalytics gaId="G-Z4CFFQK35D" />
       </body>
     </html>
   );

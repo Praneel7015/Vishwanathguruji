@@ -60,7 +60,7 @@ export default function WhyChooseUs() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
             <Image
               src={IMG.homeWhyChoose}
-              alt="Guruji conducting a consultation"
+              alt="online astrology consultation — vedic astrology expert Vishwanath Guruji"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 40vw"

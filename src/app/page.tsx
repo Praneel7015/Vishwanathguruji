@@ -1,4 +1,6 @@
+import type { Metadata } from 'next';
 import HeroSlider from '@/components/sections/home/HeroSlider';
+import ExpertiseHighlights from '@/components/sections/home/ExpertiseHighlights';
 import AboutSummary from '@/components/sections/home/AboutSummary';
 import StatsCounterBand from '@/components/sections/home/StatsCounterBand';
 import ServicesGrid from '@/components/sections/home/ServicesGrid';
@@ -14,20 +16,34 @@ import { SITE_CONFIG } from '@/constants/siteConfig';
 import { TESTIMONIALS } from '@/constants/testimonials';
 import { faqSchema, jsonLd, reviewsSchema } from '@/lib/seo';
 
-export const metadata = buildMetadata({
-  title: `${SITE_CONFIG.guruji} — Best Astrologer in Bangalore, Jayanagar`,
-  description:
-    'Pandit Sri Vishwanath Guruji is the most trusted Vedic astrologer in Bangalore with 35+ years of experience. Expert in Vashikaran, Black Magic Removal, Vastu, Marriage, Love, Career, and Family problem solutions at Sri Panchamukhi Astro Centre, Jayanagar.',
-  path: '/',
-  keywords: [
-    'best astrologer in Bangalore Jayanagar',
-    'top astrologer near me',
-    'famous astrologer in Karnataka',
-    'genuine vedic astrologer Bangalore',
-    'astrology consultation Bangalore',
-    'panchamukhi astro centre',
-  ],
-});
+const HOME_TITLE = 'Best Astrologer in Bangalore | Top Vastu-Horoscope Specialist';
+const HOME_DESCRIPTION =
+  'Best Astrologer in Bangalore with 35+ years of experience offering expert Vastu and Horoscope Consultant services for career, marriage, health, wealth & success.';
+
+export const metadata: Metadata = {
+  ...buildMetadata({
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    path: '/',
+    keywords: [
+      'Astrologer',
+      'Horoscope',
+      'vashikaran specialist',
+      'zodiac signs dates',
+      'kundali',
+      'online astrology consultation',
+      'free astrology predictions',
+      'best astrologer in Bangalore Jayanagar',
+      'top astrologer near me',
+      'famous astrologer in Karnataka',
+      'genuine vedic astrologer Bangalore',
+      'astrology consultation Bangalore',
+      'panchamukhi astro centre',
+    ],
+  }),
+  // Keep the home title exactly as specified — skip the "%s | Site Name" template.
+  title: { absolute: HOME_TITLE },
+};
 
 const HOME_FAQS = [
   {
@@ -76,6 +92,7 @@ export default function HomePage() {
       <AboutSummary />
       <StatsCounterBand />
       <ServicesGrid />
+      <ExpertiseHighlights />
       <ScrollTicker />
       <WhyChooseUs />
       <TestimonialsCarousel />

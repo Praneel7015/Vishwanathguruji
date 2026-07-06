@@ -44,7 +44,7 @@ export default function PujasBand() {
           />
           <Image
             src={IMG.homeTrust}
-            alt="Sacred havan ceremony"
+            alt="vedic astrology rituals — sacred havan ceremony at Sri Panchamukhi Astro Centre"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 40vw"

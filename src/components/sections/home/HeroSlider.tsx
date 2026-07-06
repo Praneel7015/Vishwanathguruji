@@ -17,31 +17,31 @@ const slides = [
     headline: 'Marriage Related',
     sub: 'Get trusted guidance for marriage delays, compatibility concerns, and relationship harmony through classical Vedic consultation and personalized remedies.',
     image: IMG.svc.couple,
-    alt: 'Marriage-related astrology solutions in Bangalore by Pandit Sri Vishwanath Guruji',
+    alt: 'Kundali matching and marriage solutions by the Best Astrologer in Bangalore',
   },
   {
     headline: 'Family Problems',
     sub: 'Resolve recurring family conflicts, communication gaps, and domestic stress with practical Vedic advice tailored to your household situation.',
     image: IMG.svc.health,
-    alt: 'Family problem astrology guidance and remedies in Bangalore by Vishwanath Guruji',
+    alt: 'astrologer near me — family problem guidance and remedies by Vishwanath Guruji',
   },
   {
     headline: 'Career Problems',
     sub: 'Overcome career stagnation, job instability, and workplace obstacles with astrological timing guidance and focused remedial support.',
     image: IMG.hero.career,
-    alt: 'Career problem solution astrologer in Bangalore — Sri Panchamukhi Astro Centre',
+    alt: 'astrology predictions for career growth — Sri Panchamukhi Astro Centre Bangalore',
   },
   {
     headline: 'Health Problems',
     sub: 'Receive spiritual and astrological guidance for ongoing health-related concerns, helping you regain clarity, peace of mind, and balance.',
     image: IMG.svc.child,
-    alt: 'Health problem astrology consultation by Pandit Vishwanath Guruji in Bangalore',
+    alt: 'horoscope by date of birth — health astrology consultation with Pandit Vishwanath Guruji',
   },
   {
     headline: 'Vashikarana',
     sub: 'Seek authentic Vedic Vashikarana guidance to rebuild love, trust, and emotional connection while staying aligned with positive spiritual practices.',
     image: IMG.svc.magic,
-    alt: 'Vashikarana specialist services in Bangalore by Pandit Sri Vishwanath Guruji',
+    alt: 'vashikaran specialist in Bangalore — Pandit Sri Vishwanath Guruji',
   },
 ];
 
@@ -51,6 +51,7 @@ export default function HeroSlider() {
 
   return (
     <section className="relative w-full h-[88vh] min-h-[560px] bg-site-dark-band overflow-hidden">
+      <h1 className="sr-only">Best Astrologer in Bangalore</h1>
       <Swiper
         modules={[Autoplay, Pagination]}
         speed={950}
@@ -95,9 +96,9 @@ export default function HeroSlider() {
                     <div className="text-xs font-semibold text-accent uppercase tracking-[0.2em] mb-3">
                       Sri Panchamukhi Astro Centre
                     </div>
-                    <h1 className="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-5">
+                    <p className="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-5">
                       {s.headline}
-                    </h1>
+                    </p>
                     <p className="text-base md:text-lg text-site-white/85 max-w-xl mb-8">
                       {s.sub}
                     </p>
