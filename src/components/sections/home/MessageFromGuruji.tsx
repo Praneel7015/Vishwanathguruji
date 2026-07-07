@@ -61,12 +61,13 @@ function VideoCard({ video }: { video: (typeof VIDEOS)[number] }) {
       {/* Video element */}
       <video
         ref={videoRef}
-        src={video.src}
         playsInline
         preload="metadata"
         onEnded={handleEnded}
         className="absolute inset-0 w-full h-full object-cover"
-      />
+      >
+        <source src={video.src} type="video/mp4" />
+      </video>
 
       {/* Gradient overlay — hides when playing */}
       <div

@@ -22,13 +22,14 @@ export default function TestimonialVideos() {
               >
                 <div className="relative aspect-video bg-site-dark-band">
                   <video
-                    src={v.src}
                     controls
                     playsInline
                     preload="metadata"
                     poster={v.poster}
                     className="h-full w-full object-cover"
-                  />
+                  >
+                    <source src={v.src} type="video/mp4" />
+                  </video>
                 </div>
                 <div className="p-5 flex flex-col flex-1">
                   <h3 className="font-display text-lg text-primary font-semibold leading-snug mb-2">
