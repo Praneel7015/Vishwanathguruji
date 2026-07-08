@@ -8,6 +8,7 @@ export const IMG = {
     puja: '/images/hero-puja.jpg',
   },
   about: '/images/about.jpg',
+  blog1: '/images/blog1.jpg',
   guruji: '/images/guruji.jpg',
   gurujiSelfie: '/images/guruji-selfie.jpg',
   homeConsult: '/images/home-consult.jpg',
