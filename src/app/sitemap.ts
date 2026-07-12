@@ -4,6 +4,8 @@ import { SERVICES } from '@/constants/services';
 import { BLOG } from '@/constants/blog';
 import { SERVICE_AREAS } from '@/constants/areas';
 
+export const dynamic = 'force-static';
+
 const SITE_URL = SITE_CONFIG.siteUrl.replace(/\/$/, '');
 
 export default function sitemap(): MetadataRoute.Sitemap {
