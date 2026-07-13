@@ -138,8 +138,14 @@ export default async function AreaPage({ params }: PageProps) {
             />
             <div className="prose prose-neutral max-w-none text-site-text-muted leading-relaxed space-y-4">
               <p>
-                If you are searching for the <strong>best astrologer in {a.name}</strong>, you have
-                arrived at the right place. {SITE_CONFIG.guruji} has been guiding families across{' '}
+                If you are searching for the{' '}
+                <Link
+                  href="/"
+                  className="text-accent font-semibold hover:text-primary transition-colors"
+                >
+                  best astrologer in {a.name}
+                </Link>
+                , you have arrived at the right place. {SITE_CONFIG.guruji} has been guiding families across{' '}
                 {a.city} since {SITE_CONFIG.established}, combining rigorous Vedic training with
                 three decades of practical, ethical, real-world consultation experience.
               </p>

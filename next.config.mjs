@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  trailingSlash: true,
   // Allow HMR when opening the dev site via network IP (e.g. http://172.20.96.1:3000)
   allowedDevOrigins: ['172.20.96.1'],
   images: {
