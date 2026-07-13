@@ -33,5 +33,5 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         port: 21
         local-dir: ./out/
-        server-dir: ./vishwanathguruji.com/
+        server-dir: public_html/
         # protocol: ftp # optional, default is ftp/ftps
