@@ -132,9 +132,20 @@ export default function Footer() {
       </div>
 
       <div className="relative border-t border-site-dark-surface">
-        <div className="max-w-container mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-site-text-light/70">
+        <div className="max-w-container mx-auto px-6 pt-4 pb-32 sm:pb-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-site-text-light/70 sm:pr-28">
           <span>
-            © {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.
+            © {new Date().getFullYear()} Vishwanath Guruji. All rights reserved.
+          </span>
+          <span>
+            Made by{' '}
+            <a
+              href="https://praneel.sindhole.com/contact"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:text-accent-light underline underline-offset-2 transition-colors"
+            >
+              Praneel S
+            </a>
           </span>
         </div>
       </div>
