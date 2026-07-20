@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import PageHero from '@/components/ui/PageHero';
+import BlogContent from '@/components/sections/blog/BlogContent';
 import { BLOG, getBlogBySlug } from '@/constants/blog';
 import { buildMetadata } from '@/lib/metadata';
 import { formatDate } from '@/lib/utils';
@@ -76,9 +77,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 sizes="(max-width: 1024px) 100vw, 66vw"
               />
             </div>
-            <div className="prose prose-neutral max-w-none text-site-text-muted leading-relaxed whitespace-pre-line">
-              {post.content}
-            </div>
+            <BlogContent content={post.content} />
           </article>
           <aside className="lg:sticky lg:top-32 self-start">
             <div className="bg-site-white p-6 rounded-md border border-site-border/40">
