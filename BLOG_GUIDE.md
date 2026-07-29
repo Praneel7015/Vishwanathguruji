@@ -1,88 +1,66 @@
-# 📝 How to Add a New Blog Post Manually
+# 📝 How to Add & Publish Blog Posts
 
-Adding a new blog post is now super easy! Each blog post lives in its own simple `.md` (Markdown) file inside `src/content/blogs/`.
+There are two ways to add new blog posts to the website:
 
----
-
-## Step 1: Add the Blog Image (Optional but Recommended)
-
-Save your blog post cover image (JPG, PNG, or WebP) inside:
-`public/images/`
-*Example*: `public/images/my-new-blog-image.jpg`
+1. **Option A: Admin Portal (Recommended for Website Owner)** — No code required!
+2. **Option B: Manual Markdown File Addition** — For developers.
 
 ---
 
-## Step 2: Create a New Markdown File
+## 🚀 Option A: Automated Admin Portal (`/admin`)
 
-1. Navigate to:
-   `src/content/blogs/`
+The easiest way for the website owner to publish blogs without touching code or GitHub!
 
-2. Create a new `.md` file named after your blog's topic/slug:
-   *Example*: `my-new-blog-post.md`
+### Step 1: Open the Admin Portal
+Visit: **`https://vishwanathguruji.com/admin`** (or `http://localhost:3000/admin` locally).
 
-3. Copy and paste the template below into your new file:
+### Step 2: Setup GitHub Access Token (First Time Only)
+1. Click **"Setup Access Token"**.
+2. Enter a GitHub Personal Access Token (PAT) with `repo` / `contents` write permissions.
+3. Click **Save & Verify Token**. The token is stored safely in your browser.
+
+### Step 3: Write & Publish Article
+1. Enter **Article Title** (the URL slug generates automatically).
+2. Choose a **Category** (`Astrology`, `Vastu Shastra`, `Doshas`, `Remedies`, `Marriage`, etc.).
+3. Upload a **Cover Image** (drag and drop JPG, PNG, or WebP).
+4. Write a **Short Excerpt Summary** (1-2 sentences for preview cards & Google SEO).
+5. Draft your article content in the editor (use `##` for section titles, or click formatting buttons).
+6. Click **Publish Article Now 🚀**.
+
+> **What happens automatically?**
+> The Admin Portal commits the image to `public/images/` and the article to `src/content/blogs/` directly on GitHub. 
+> GitHub Actions automatically builds and deploys your new blog post to GoDaddy via FTP in ~1-2 minutes!
+
+---
+
+## 💻 Option B: Manual Markdown File (For Developers)
+
+Each blog post lives in its own simple `.md` file inside `src/content/blogs/`.
+
+1. Add your cover image to `public/images/my-cover-image.jpg`.
+2. Create `src/content/blogs/my-new-blog-slug.md`:
 
 ```markdown
 ---
-slug: "my-new-blog-post"
+slug: "my-new-blog-slug"
 title: "My New Blog Post Title"
-excerpt: "A short 1-2 sentence preview summary of the post for search engines and cards."
+excerpt: "Short 1-2 sentence preview text for search engines and cards."
 date: "2026-08-01"
-image: "/images/my-new-blog-image.jpg"
+image: "/images/my-cover-image.jpg"
 category: "Astrology"
 featured: false
 ---
 
-Write your opening introduction paragraph here.
+Opening introduction paragraph...
 
-## First Section Heading
+## Section Title
 
-Write your section content here. You can use normal text formatting:
-
-• Bullet point 1
-• Bullet point 2
-
-## Second Section Heading
-
-Add as many sections as you like.
-
-## Conclusion
-
-Final summary and contact advice.
+Section content...
 ```
 
----
-
-## Header Field Reference
-
-| Field | Description | Example |
-| :--- | :--- | :--- |
-| **`slug`** | Unique URL identifier (lowercase, hyphens) | `"my-new-blog-post"` |
-| **`title`** | Article title displayed at the top | `"How Vastu Shastra Helps Your Home"` |
-| **`excerpt`** | 1-2 sentence preview text used in cards & Google SEO | `"Discover how Vastu Shastra balances natural elements..."` |
-| **`date`** | Publication date (`YYYY-MM-DD`) | `"2026-08-01"` |
-| **`image`** | Image path in `public/images/` | `"/images/my-image.jpg"` |
-| **`category`** | Topic badge shown above title | `"Astrology"`, `"Vastu Shastra"`, `"Doshas"`, `"Remedies"` |
-| **`featured`** | `true` or `false` — whether to highlight as featured post | `false` |
-
----
-
-## Step 3: Test Locally
-
-To test your new blog post on your computer:
-
-```bash
-npm run dev
-```
-
-Visit: `http://localhost:3000/blog/my-new-blog-post`
-
----
-
-## Step 4: Publish to GitHub
-
+3. Commit and push to `main` branch on GitHub:
 ```bash
 git add .
-git commit -m "feat: add new blog post - My New Blog Post"
+git commit -m "feat(blog): add my new blog post"
 git push origin main
 ```
