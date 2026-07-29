@@ -15,6 +15,7 @@ export const IMG = {
   homeTrust: '/images/home-trust.jpg',
   homeBanner: '/images/banner.jpg',
   homeWhyChoose: '/images/vishwanathguruji.jpg',
+  kaalSarpaDosha: '/images/kaal-sarpa-dosha.jpg',
   svc: {
     magic: '/images/svc-magic.jpg',
     vashikaran: '/images/vashikaran.jpg',
