@@ -24,85 +24,66 @@ function headers(): HeadersInit {
   };
 }
 
-/** Get the SHA of the latest commit on the branch */
-async function getLatestCommitSha(): Promise<string> {
-  const res = await fetch(`${API_BASE}/git/ref/heads/${BRANCH}`, { headers: headers() });
-  if (!res.ok) throw new Error(`Failed to get branch ref: ${res.status} ${await res.text()}`);
-  const data = await res.json();
-  return data.object.sha;
+/** Helper to encode UTF-8 string to Base64 in browser */
+function stringToBase64(str: string): string {
+  return btoa(unescape(encodeURIComponent(str)));
 }
 
-/** Get the tree SHA for a given commit */
-async function getCommitTreeSha(commitSha: string): Promise<string> {
-  const res = await fetch(`${API_BASE}/git/commits/${commitSha}`, { headers: headers() });
-  if (!res.ok) throw new Error(`Failed to get commit: ${res.status}`);
-  const data = await res.json();
-  return data.tree.sha;
-}
+/**
+ * Creates or updates a file in the repository using GitHub Contents API
+ */
+async function createOrUpdateFile(
+  filePath: string,
+  contentBase64: string,
+  commitMessage: string,
+): Promise<{ commitSha: string }> {
+  // Check if file exists to get existing SHA for updates
+  let sha: string | undefined;
+  try {
+    const checkRes = await fetch(`${API_BASE}/contents/${filePath}?ref=${BRANCH}`, {
+      headers: headers(),
+    });
+    if (checkRes.ok) {
+      const existingData = await checkRes.json();
+      sha = existingData.sha;
+    }
+  } catch {
+    // File does not exist yet
+  }
 
-/** Create a blob (for binary image or text content) */
-async function createBlob(content: string, encoding: 'base64' | 'utf-8'): Promise<string> {
-  const res = await fetch(`${API_BASE}/git/blobs`, {
-    method: 'POST',
-    headers: headers(),
-    body: JSON.stringify({ content, encoding }),
-  });
-  if (!res.ok) throw new Error(`Failed to create blob: ${res.status} ${await res.text()}`);
-  const data = await res.json();
-  return data.sha;
-}
-
-/** Create a new tree with the given file entries */
-async function createTree(
-  baseTreeSha: string,
-  files: { path: string; sha: string; mode: '100644' }[],
-): Promise<string> {
-  const res = await fetch(`${API_BASE}/git/trees`, {
-    method: 'POST',
+  const res = await fetch(`${API_BASE}/contents/${filePath}`, {
+    method: 'PUT',
     headers: headers(),
     body: JSON.stringify({
-      base_tree: baseTreeSha,
-      tree: files.map((f) => ({
-        path: f.path,
-        mode: f.mode,
-        type: 'blob',
-        sha: f.sha,
-      })),
+      message: commitMessage,
+      content: contentBase64,
+      branch: BRANCH,
+      ...(sha ? { sha } : {}),
     }),
   });
-  if (!res.ok) throw new Error(`Failed to create tree: ${res.status} ${await res.text()}`);
-  const data = await res.json();
-  return data.sha;
-}
 
-/** Create a new commit */
-async function createCommit(
-  message: string,
-  treeSha: string,
-  parentSha: string,
-): Promise<string> {
-  const res = await fetch(`${API_BASE}/git/commits`, {
-    method: 'POST',
-    headers: headers(),
-    body: JSON.stringify({
-      message,
-      tree: treeSha,
-      parents: [parentSha],
-    }),
-  });
-  if (!res.ok) throw new Error(`Failed to create commit: ${res.status} ${await res.text()}`);
-  const data = await res.json();
-  return data.sha;
-}
+  if (!res.ok) {
+    const errorText = await res.text();
+    let parsed: any = {};
+    try {
+      parsed = JSON.parse(errorText);
+    } catch {
+      // Ignore
+    }
 
-/** Update the branch reference to point at a new commit */
-async function updateBranchRef(commitSha: string): Promise<void> {
-  const res = await fetch(`${API_BASE}/git/refs/heads/${BRANCH}`, {
-    method: 'PATCH',
-    headers: headers(),
-    body: JSON.stringify({ sha: commitSha }),
-  });
-  if (!res.ok) throw new Error(`Failed to update branch: ${res.status} ${await res.text()}`);
+    if (res.status === 403) {
+      throw new Error(
+        `GitHub Permission Error (403): Your Personal Access Token does not have write permission for repository "${REPO_OWNER}/${REPO_NAME}". Please ensure your token has "Contents: Read & Write" permission (Fine-Grained PAT) or "repo" / "public_repo" scope (Classic PAT).`,
+      );
+    }
+
+    throw new Error(
+      `Failed to save ${filePath}: ${res.status} ${parsed.message || errorText}`,
+    );
+  }
+
+  const data = await res.json();
+  return { commitSha: data.commit.sha };
 }
 
 export interface PublishResult {
@@ -115,7 +96,7 @@ export type ProgressCallback = (step: string, detail?: string) => void;
 
 /**
  * Publishes a new blog post to the GitHub repository.
- * Commits both the cover image and the markdown file atomically in a single commit.
+ * Uploads cover image and creates/updates markdown post via GitHub Contents API.
  */
 export async function publishBlogPost(
   {
@@ -144,7 +125,7 @@ export async function publishBlogPost(
   const imagePath = `public/images/${slug}.${imageExtension}`;
   const blogPath = `src/content/blogs/${slug}.md`;
 
-  // Build the frontmatter markdown content
+  // Build frontmatter markdown content
   const markdown = `---
 slug: "${slug}"
 title: "${title.replace(/"/g, '\\"')}"
@@ -158,39 +139,35 @@ featured: ${featured}
 ${content.trim()}
 `;
 
-  onProgress?.('Preparing upload', 'Getting latest commit info...');
-  const latestCommitSha = await getLatestCommitSha();
-  const baseTreeSha = await getCommitTreeSha(latestCommitSha);
+  // 1. Upload Cover Image
+  onProgress?.('Uploading image', `Saving cover image to ${imagePath}...`);
+  await createOrUpdateFile(
+    imagePath,
+    imageBase64,
+    `feat(blog): upload cover image for "${title}"`,
+  );
 
-  onProgress?.('Uploading image', `Uploading cover image to ${imagePath}...`);
-  const imageBlobSha = await createBlob(imageBase64, 'base64');
+  // 2. Create Blog Markdown File
+  onProgress?.('Creating blog post', `Saving article file to ${blogPath}...`);
+  const { commitSha } = await createOrUpdateFile(
+    blogPath,
+    stringToBase64(markdown),
+    `feat(blog): add article "${title}"`,
+  );
 
-  onProgress?.('Creating blog file', `Creating ${blogPath}...`);
-  const markdownBlobSha = await createBlob(markdown, 'utf-8');
-
-  onProgress?.('Building commit', 'Creating Git tree and commit...');
-  const newTreeSha = await createTree(baseTreeSha, [
-    { path: imagePath, sha: imageBlobSha, mode: '100644' },
-    { path: blogPath, sha: markdownBlobSha, mode: '100644' },
-  ]);
-
-  const commitMessage = `feat(blog): add "${title}"`;
-  const newCommitSha = await createCommit(commitMessage, newTreeSha, latestCommitSha);
-
-  onProgress?.('Publishing', 'Pushing to main branch...');
-  await updateBranchRef(newCommitSha);
-
-  onProgress?.('Done', 'Blog post published! Deployment will start automatically.');
+  onProgress?.('Done', 'Blog post published! GoDaddy deployment started via GitHub Actions.');
 
   return {
-    commitSha: newCommitSha,
+    commitSha,
     blogPath,
     imagePath,
   };
 }
 
-/** Validates a GitHub token by fetching the repository info */
-export async function validateToken(token: string): Promise<boolean> {
+/** Validates a GitHub token and checks repository write permissions */
+export async function validateToken(
+  token: string,
+): Promise<{ valid: boolean; message?: string }> {
   try {
     const res = await fetch(API_BASE, {
       headers: {
@@ -198,8 +175,31 @@ export async function validateToken(token: string): Promise<boolean> {
         Accept: 'application/vnd.github+json',
       },
     });
-    return res.ok;
-  } catch {
-    return false;
+
+    if (!res.ok) {
+      if (res.status === 401) {
+        return { valid: false, message: 'Invalid or expired Personal Access Token.' };
+      }
+      if (res.status === 404) {
+        return {
+          valid: false,
+          message: `Repository ${REPO_OWNER}/${REPO_NAME} not found or token has no access to it.`,
+        };
+      }
+      return { valid: false, message: `GitHub API error (${res.status}).` };
+    }
+
+    const repoData = await res.json();
+    if (repoData.permissions && repoData.permissions.push === false) {
+      return {
+        valid: false,
+        message:
+          'Token authenticated, but lacks WRITE/PUSH permissions for this repository. Please grant "Contents: Read & Write" permission.',
+      };
+    }
+
+    return { valid: true };
+  } catch (err: any) {
+    return { valid: false, message: err.message || 'Connection error to GitHub API.' };
   }
 }

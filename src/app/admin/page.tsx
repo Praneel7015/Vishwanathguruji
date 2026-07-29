@@ -87,21 +87,23 @@ export default function AdminPage() {
 
   const checkTokenValidity = async (t: string) => {
     setIsCheckingToken(true);
-    const valid = await validateToken(t);
+    const { valid, message } = await validateToken(t);
     setIsTokenValid(valid);
     setIsCheckingToken(false);
+    if (!valid && message) {
+      setErrorMsg(message);
+    }
     return valid;
   };
 
   const handleSaveToken = async () => {
     if (!tokenInput.trim()) return;
+    setErrorMsg(null);
     const valid = await checkTokenValidity(tokenInput.trim());
     if (valid) {
       localStorage.setItem('github_pat', tokenInput.trim());
       setToken(tokenInput.trim());
       setShowTokenModal(false);
-    } else {
-      setErrorMsg('Invalid GitHub Personal Access Token. Please check token permissions.');
     }
   };
 
@@ -277,10 +279,15 @@ export default function AdminPage() {
               <h2 className="font-display text-xl font-bold text-primary mb-2">
                 GitHub Access Token Setup
               </h2>
-              <p className="text-xs text-site-text-muted mb-4 leading-relaxed">
-                To publish articles directly from your browser to GitHub, enter a GitHub Personal
-                Access Token (Fine-Grained or Classic with <code className="bg-site-surface px-1 py-0.5 rounded">repo / contents</code> scope). Token will be saved safely in your browser.
+              <p className="text-xs text-site-text-muted mb-3 leading-relaxed">
+                Enter your GitHub Personal Access Token to authorize publishing directly to your repository:
               </p>
+
+              <div className="bg-site-surface p-3 rounded text-[11px] text-site-text-muted space-y-1 mb-4 border border-site-border/40">
+                <p className="font-semibold text-primary">Required Token Permissions:</p>
+                <p>• <strong>Fine-Grained Token:</strong> Select <code>Praneel7015/Vishwanathguruji</code> & set <strong>Contents: Read and write</strong></p>
+                <p>• <strong>Classic Token:</strong> Check the <code>repo</code> or <code>public_repo</code> scope</p>
+              </div>
 
               <div className="space-y-4">
                 <div>
