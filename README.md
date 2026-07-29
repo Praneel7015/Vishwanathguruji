@@ -46,11 +46,18 @@ src/
     layout/             # Navbar, footer, floating actions, menus
     sections/           # Section-level components per page
     ui/                 # Reusable UI primitives/components
-  constants/            # Site data (services, blog, testimonials, config, etc.)
+  constants/            # Site data (services, testimonials, config, etc.)
+  content/
+    blogs/              # Standalone Markdown (.md) blog files
   lib/                  # Utilities and metadata helpers
   types/                # Shared TypeScript types
 public/
   images/               # Replace placeholder assets with production images
+
+## Blog Management
+
+All blog posts are managed as individual Markdown files inside `src/content/blogs/`. See [`BLOG_GUIDE.md`](./BLOG_GUIDE.md) for full instructions on creating and publishing new blog posts.
+
 ```
 
 ## Routing Notes
