@@ -3,7 +3,7 @@ slug: "vedic-astrology-guide"
 title: "Vedic Astrology: A Timeless Guide to Understanding Your Life’s Journey"
 excerpt: "Discover how Vedic astrology helps you understand your strengths, relationships, career opportunities, and spiritual growth through personalized horoscope analysis."
 date: "2026-07-12"
-image: "/images/vedic-astrology.jpg"
+image: "/images/vedic-astrology.png"
 category: "Astrology"
 featured: true
 ---
