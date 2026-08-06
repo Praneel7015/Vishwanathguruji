@@ -5,7 +5,7 @@ excerpt: "Discover how Vedic astrology helps you understand your strengths, rela
 date: "2026-08-01"
 image: "/images/vedic-astrology.png"
 category: "Astrology"
-featured: true
+featured: false
 ---
 
 For thousands of years, Vedic astrology has served as a trusted guide for people seeking clarity about their lives. Rooted in the ancient Vedas of India, this sacred science goes beyond predicting future events. It helps individuals understand their strengths, weaknesses, life purpose, relationships, career opportunities, and spiritual growth. Unlike modern astrology, which mainly focuses on sun signs, Vedic astrology studies the complete birth chart based on the exact date, time, and place of birth.
