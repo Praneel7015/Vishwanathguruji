@@ -1,4 +1,4 @@
-name: Deploy Website to GoDaddy via FTP
+﻿name: Deploy Website to GoDaddy via FTP
 
 on:
   push:
@@ -11,10 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Get latest code
-      uses: actions/checkout@v6
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 2
 
     - name: Use Node.js
-      uses: actions/setup-node@v6
+      uses: actions/setup-node@v4
       with:
         node-version: 20
         cache: 'npm'
@@ -25,8 +27,8 @@ jobs:
     - name: Build Project
       run: npm run build
 
-    - name: Sync files via FTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+    - name: Sync changed files via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
@@ -34,4 +36,15 @@ jobs:
         port: 21
         local-dir: ./out/
         server-dir: public_html/
-        # protocol: ftp # optional, default is ftp/ftps
+        # Stores a .ftp-deploy-sync-state.json on the server after each run.
+        # On the next run the action downloads that state file, computes a diff
+        # against the freshly-built output, and uploads only new / changed files
+        # while deleting files that were removed.  This makes every deploy
+        # incremental rather than a full mirror.
+        state-name: .ftp-deploy-sync-state.json
+        dry-run: false
+        dangerous-clean-slate: false
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
