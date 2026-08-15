@@ -5,7 +5,7 @@ excerpt: "Discover how Vastu Shastra balances the five elements to create homes 
 date: "2026-08-06"
 image: "/images/vastu-shastra.jpg"
 category: "Vastu"
-featured: true
+featured: false
 ---
 
 Vastu Shastra is an ancient Indian architectural science that focuses on creating harmony between humans and their living spaces. Rooted in the wisdom of the Vedas, Vastu Shastra combines the five natural elements—Earth, Water, Fire, Air, and Space—to create an environment that supports health, happiness, wealth, and spiritual well-being.
