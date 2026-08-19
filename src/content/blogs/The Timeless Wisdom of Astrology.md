@@ -5,7 +5,7 @@ excerpt: "Astrology offers a traditional framework for understanding personality
 date: "2026-08-14"
 image: "/images/timeless-wisdom-of-astrology.jpg"
 category: "Astrology"
-featured: true
+featured: false
 ---
 
 Astrology has fascinated humanity for thousands of years. More than simply reading daily horoscopes, astrology provides a traditional framework for understanding personality, life patterns, relationships, career choices, and important phases of life. By studying the positions of planets and stars at the time of birth, astrologers interpret a person’s birth chart to provide guidance.
