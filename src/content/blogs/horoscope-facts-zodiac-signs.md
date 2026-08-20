@@ -26,54 +26,66 @@ Indian astrology, known as Vedic astrology or Jyotish, developed independently a
 
 The zodiac is divided into twelve signs, each linked to specific personality characteristics. Here is a quick overview:
 
-• Aries (March 21 – April 19): Energetic, courageous, and confident.
-• Taurus (April 20 – May 20): Reliable, patient, and practical.
-• Gemini (May 21 – June 20): Curious, adaptable, and communicative.
-• Cancer (June 21 – July 22): Caring, emotional, and intuitive.
-• Leo (July 23 – August 22): Creative, ambitious, and charismatic.
-• Virgo (August 23 – September 22): Organized, analytical, and detail-oriented.
-• Libra (September 23 – October 22): Diplomatic, balanced, and social.
-• Scorpio (October 23 – November 21): Passionate, determined, and resourceful.
-• Sagittarius (November 22 – December 21): Adventurous, optimistic, and independent.
-• Capricorn (December 22 – January 19): Disciplined, responsible, and hardworking.
-• Aquarius (January 20 – February 18): Innovative, intellectual, and humanitarian.
-• Pisces (February 19 – March 20): Compassionate, imaginative, and artistic.
+- **Aries (March 21 – April 19):** Energetic, courageous, and confident.
+- **Taurus (April 20 – May 20):** Reliable, patient, and practical.
+- **Gemini (May 21 – June 20):** Curious, adaptable, and communicative.
+- **Cancer (June 21 – July 22):** Caring, emotional, and intuitive.
+- **Leo (July 23 – August 22):** Creative, ambitious, and charismatic.
+- **Virgo (August 23 – September 22):** Organized, analytical, and detail-oriented.
+- **Libra (September 23 – October 22):** Diplomatic, balanced, and social.
+- **Scorpio (October 23 – November 21):** Passionate, determined, and resourceful.
+- **Sagittarius (November 22 – December 21):** Adventurous, optimistic, and independent.
+- **Capricorn (December 22 – January 19):** Disciplined, responsible, and hardworking.
+- **Aquarius (January 20 – February 18):** Innovative, intellectual, and humanitarian.
+- **Pisces (February 19 – March 20):** Compassionate, imaginative, and artistic.
 
 While these descriptions are widely recognized, every individual is unique, and personality is influenced by many factors beyond astrology.
 
 ## Interesting Horoscope Facts
 
-1. Astrology and Astronomy Were Once Connected
+### 1. Astrology and Astronomy Were Once Connected
+
 In ancient times, astrology and astronomy were considered part of the same field. Early astronomers carefully observed the movements of stars and planets, which also formed the basis for astrological interpretations. Over time, astronomy became a scientific discipline, while astrology developed as a belief system focused on symbolic meanings.
 
-2. Your Sun Sign Is Only One Part of Your Birth Chart
+### 2. Your Sun Sign Is Only One Part of Your Birth Chart
+
 Many people identify themselves by their Sun sign, but astrologers believe a complete birth chart includes the Moon sign, rising sign (Ascendant), and the positions of all major planets. These additional elements are thought to provide a more detailed picture of personality and life experiences.
 
-3. There Are Four Zodiac Elements
+### 3. There Are Four Zodiac Elements
+
 The twelve zodiac signs are grouped into four classical elements:
-• Fire: Aries, Leo, Sagittarius
-• Earth: Taurus, Virgo, Capricorn
-• Air: Gemini, Libra, Aquarius
-• Water: Cancer, Scorpio, Pisces
+
+- **Fire:** Aries, Leo, Sagittarius
+- **Earth:** Taurus, Virgo, Capricorn
+- **Air:** Gemini, Libra, Aquarius
+- **Water:** Cancer, Scorpio, Pisces
+
 Each element is associated with different qualities. Fire signs are often described as energetic, Earth signs as practical, Air signs as intellectual, and Water signs as emotional.
 
-4. Zodiac Signs Are Also Divided by Qualities
+### 4. Zodiac Signs Are Also Divided by Qualities
+
 Each zodiac sign belongs to one of three qualities:
-• Cardinal signs initiate action.
-• Fixed signs are known for stability.
-• Mutable signs are adaptable and flexible.
+
+- **Cardinal signs** initiate action.
+- **Fixed signs** are known for stability.
+- **Mutable signs** are adaptable and flexible.
+
 These qualities are used by astrologers to interpret behavioral tendencies and interactions between signs.
 
-5. Horoscopes Remain Popular Worldwide
+### 5. Horoscopes Remain Popular Worldwide
+
 Despite advances in science and technology, horoscopes continue to attract millions of readers. Astrology content is widely shared through newspapers, magazines, websites, mobile apps, and social media platforms. Many people enjoy reading horoscopes for entertainment, inspiration, or personal reflection.
 
-6. Birth Time Matters in Astrology
+### 6. Birth Time Matters in Astrology
+
 Astrologers often ask for the exact time and location of birth when creating a birth chart. According to astrological practice, even a small difference in birth time can change the rising sign and the placement of houses, leading to different interpretations.
 
-7. Compatibility Is a Popular Topic
+### 7. Compatibility Is a Popular Topic
+
 One of the most searched astrology topics is zodiac compatibility. Astrologers compare birth charts to evaluate how two people may interact in friendships, romantic relationships, or business partnerships. While compatibility readings are popular, they should not be considered a definitive measure of relationship success.
 
-8. Mercury Retrograde Is Widely Discussed
+### 8. Mercury Retrograde Is Widely Discussed
+
 Mercury retrograde is one of astrology's most well-known concepts. During this period, Mercury appears to move backward in the sky due to Earth's orbital motion. Astrologers associate it with communication challenges, travel delays, and misunderstandings. Astronomically, however, the apparent backward motion is an optical effect rather than an actual reversal of the planet's orbit.
 
 ## Do Horoscopes Really Predict the Future?
@@ -85,11 +97,13 @@ Many people still find value in horoscopes because they encourage self-reflectio
 ## Why Are Horoscopes So Popular?
 
 Several factors contribute to the enduring popularity of horoscopes:
-• They offer simple and engaging personality descriptions.
-• They encourage people to reflect on their emotions and goals.
-• They create opportunities for conversations about relationships and compatibility.
-• They are easily accessible through digital platforms and social media.
-• They provide a sense of curiosity about the future.
+
+- They offer simple and engaging personality descriptions.
+- They encourage people to reflect on their emotions and goals.
+- They create opportunities for conversations about relationships and compatibility.
+- They are easily accessible through digital platforms and social media.
+- They provide a sense of curiosity about the future.
+
 These reasons help explain why astrology remains relevant across different cultures and generations.
 
 ## Conclusion
