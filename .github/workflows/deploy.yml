@@ -18,7 +18,7 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 20
+        node-version: 24
         cache: 'npm'
 
     - name: Install dependencies
@@ -36,14 +36,14 @@ jobs:
         port: 21
         local-dir: ./out/
         server-dir: public_html/
-        # Stores a .ftp-deploy-sync-state.json on the server after each run.
-        # On the next run the action downloads that state file, computes a diff
-        # against the freshly-built output, and uploads only new / changed files
-        # while deleting files that were removed.  This makes every deploy
-        # incremental rather than a full mirror.
-        state-name: .ftp-deploy-sync-state.json
+        # dangerous-clean-slate: true wipes the remote public_html/ on every deploy
+        # and uploads the full build fresh.  This prevents the "550 Can't change
+        # directory" FTP error that occurs when the saved sync-state references a
+        # stale _next/<hash>/ folder that was deleted from the server between runs.
+        # Switch to false (and re-add state-name) only if deploy times become a
+        # concern and the server is never manually modified between deployments.
         dry-run: false
-        dangerous-clean-slate: false
+        dangerous-clean-slate: true
         exclude: |
           **/.git*
           **/.git*/**
