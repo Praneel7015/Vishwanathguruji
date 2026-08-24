@@ -43,7 +43,7 @@ jobs:
         # Switch to false (and re-add state-name) only if deploy times become a
         # concern and the server is never manually modified between deployments.
         dry-run: false
-        dangerous-clean-slate: true
+        dangerous-clean-slate: false
         exclude: |
           **/.git*
           **/.git*/**
