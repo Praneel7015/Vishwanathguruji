@@ -5,7 +5,7 @@ excerpt: "Discover how Kundli, or birth chart analysis, provides insights into p
 date: "2026-08-19"
 image: "/images/kundli-vedic.png"
 category: "Astrology"
-featured: true
+featured: false
 ---
 
 Kundli, also known as Janam Kundli or birth chart, is one of the most important concepts in Vedic astrology. It represents the positions of planets and celestial bodies at the exact time, date, and place of a person’s birth. By studying these planetary positions, astrologers interpret different aspects of life, including personality, career, marriage, finances, health, family relationships, and important life events.
