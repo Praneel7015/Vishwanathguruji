@@ -52,4 +52,4 @@ Astrology offers a framework for understanding interests, abilities, and tendenc
 
 ## Conclusion
 
-Planetary positions play a key role in career astrology. The 10th house, Sun, Saturn, Mercury, Jupiter, Venus, Mars, Rahu, and planetary periods together provide insights into career possibilities. While astrology offers guidance, personal skills, education, and effort remain essential for success. Consulting an experienced **[Astrologer in Bangalore]** can provide personalized career direction.
+Planetary positions play a key role in career astrology. The 10th house, Sun, Saturn, Mercury, Jupiter, Venus, Mars, Rahu, and planetary periods together provide insights into career possibilities. While astrology offers guidance, personal skills, education, and effort remain essential for success. Consulting an experienced [Astrologer in Bangalore](https://vishwanathguruji.com) can provide personalized career direction.
