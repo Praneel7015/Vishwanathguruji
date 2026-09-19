@@ -5,7 +5,7 @@ excerpt: "Confused about career, marriage, business, or financial choices? Vedic
 date: "2026-08-24"
 image: "/images/hero-life-decisions.jpg"
 category: "Astrology"
-featured: true
+featured: false
 ---
 
 Life is full of important decisions — from choosing a career and starting a business to marriage, moving to a new place, or making financial choices. Even after considering practical factors, uncertainty often remains. Astrology provides another perspective by studying planetary influences and their connection with human life.
