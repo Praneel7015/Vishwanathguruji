@@ -166,16 +166,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     city: 'Bangalore',
     region: 'Karnataka',
     blurb:
-      'Rajajinagar clients visit the centre for confidential family, marriage, and protection consultations.',
-    geo: { latitude: 12.9915, longitude: 77.5535 },
-  },
-  {
-    slug: 'rajaji-nagar',
-    name: 'Rajaji Nagar',
-    city: 'Bangalore',
-    region: 'Karnataka',
-    blurb:
-      'A second URL variant for Rajaji Nagar so seekers reach Guruji whichever spelling they search for.',
+      'Residents of Rajajinagar can enquire about traditional horoscope reading, marriage guidance, career astrology and Vastu consultation at the Jayanagar centre.',
     geo: { latitude: 12.9915, longitude: 77.5535 },
   },
   {

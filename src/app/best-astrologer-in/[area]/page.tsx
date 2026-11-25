@@ -27,6 +27,17 @@ export function generateStaticParams() {
   return SERVICE_AREAS.map((a) => ({ area: a.slug }));
 }
 
+const RAJAJINAGAR_SERVICES = [
+  'Complete horoscope analysis and birth chart reading',
+  'Marriage guidance, Kundali matching and Guna Milan',
+  'Love and relationship guidance that respects both individuals’ choices',
+  'Family concerns and traditional spiritual practices',
+  'Property astrology and Vastu Shastra consultations',
+  'Business, financial and career astrology consultations',
+  'Pitru Dosha consultations and traditional ancestral rituals',
+  'Navagraha Shanti and other traditional pujas',
+];
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { area } = await params;
   const a = getAreaBySlug(area);
@@ -112,6 +123,7 @@ export default async function AreaPage({ params }: PageProps) {
 
   const featuredServices = SERVICES.slice(0, 6);
   const inCity = a.city === a.name ? '' : `, ${a.city}`;
+  const isRajajinagar = a.slug === 'rajajinagar';
 
   return (
     <>
@@ -228,11 +240,21 @@ export default async function AreaPage({ params }: PageProps) {
             title={`Solutions Offered to ${a.name} Clients`}
             subtitle={`Guruji's most-sought-after Vedic remedies, now serving ${a.name} families.`}
           />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+          {isRajajinagar && (
+            <div className="max-w-3xl mx-auto mb-10 rounded-lg border border-site-border/40 bg-site-white p-6 md:p-8">
+              <h3 className="font-display text-xl md:text-2xl font-bold text-primary mb-4">Traditional Astrology Consultations for Rajajinagar</h3>
+              <p className="text-site-text-muted leading-relaxed mb-5">Rajajinagar is a well-established residential and commercial neighbourhood. Residents can contact Guruji to discuss traditional interpretations for personal, family and professional questions. The centre was established in Jayanagar, Bangalore, in 1989; ask about appointment and remote consultation arrangements before visiting.</p>
+              <ul className="grid sm:grid-cols-2 gap-3 text-site-text-muted">
+                {RAJAJINAGAR_SERVICES.map((item) => <li key={item} className="flex items-start gap-2"><Sparkles size={16} className="mt-1 shrink-0 text-accent" /><span>{item}</span></li>)}
+              </ul>
+              <p className="mt-5 text-sm text-site-text-muted">Astrology is a traditional belief-based practice. Consider practical judgement and qualified professional advice when making important personal, medical, legal or financial decisions.</p>
+            </div>
+          )}
+          {!isRajajinagar && <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
             {featuredServices.map((s, i) => (
               <ServiceCard key={s.slug} service={s} index={i} showIcon={false} />
             ))}
-          </div>
+          </div>}
           <div className="text-center mt-10">
             <Button href="/services" variant="outline" size="lg">
               View All Services
